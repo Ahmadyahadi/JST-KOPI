@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JST</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="video-container">
+    <video autoplay loop muted plays inline class="back-video">
+      <source src="footage.mp4" type="video/mp4">
+    </video> </div>
+  <div class="video-info">
+    <h1>Lagi pengen ngopi?<br> Tapi bingung kopinya apa?</h1>
+    <button id="openDialogButton">Cari aja disini!</button>
+    <dialog class="modal-container" id="modal_container">
+      <h3>Sesuaikan Berdasarkan Kopi Keinginanmu</h3>
+      <label for="rasa">Rasa</label>
+      <input type="range" id="rasa" min="1" max="5">
+      <label for="tekstur">Tekstur</label>
+      <input type="range" id="tekstur" min="1" max="5">
+      <label for="aroma">Aroma</label>
+      <input type="range" id="aroma" min="1" max="5">
+      <button id="determineButton">Cari Sekarang</button>
+      <h3>Skala 1-5 untuk tingkat kekuatan rasa, kekentalan tekstur, dan ketajaman aroma</h3>
+    </dialog>
+  </div>
+  <div id="result" class="hidden">
+    <h2>Kopi yang cocok untukmu:</h2>
+    <h2 id="coffeeType"></h2>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+@font-face{
+font-family: myFont;
+src:url(montserrat.ttf);
+}
+
+body {
+  font-family: myFont;
+  text-align: center;
+  
+}
+
+h1{
+    color: #F2EAD3;
+}
+h2{
+    color: #FFFFFF
+}
+h3{
+  color:rgb(74, 42, 9)
+}
+
+button {
+border: 1px solid #3F2305;
+background: none;
+padding: 10px 20px;
+font-size: 15px;
+cursor: pointer;
+margin: 10px;
+font-family: myFont;
+transition: 0.8s;
+position:relative;
+overflow:hidden;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+#coffeeType{
+border-radius: 50% 50% 50% 50% ;
+}
+#openDialogButton{
+color: #FFD6A5;
+}
+#openDialogButton:hover{
+color: #fff;
+}
+#openDialogButton::before{
+content: "";
+position:absolute;
+left: 0;
+width: 100%;
+height: 0%;
+background: #862B0D;
+z-index: -1;
+transition: 0.8s;
+top: 0;
+border-radius: 0 0 50% 50%;
+}
+#openDialogButton:hover::before{
+height: 180%;
+}
+
+#determineButton{
+color: #862B0D;
+}
+#determineButton:hover{
+color: #fff;
+}
+#determineButton::before{
+content: "";
+position:absolute;
+left: 0;
+width: 100%;
+height: 0%;
+background: #862B0D;
+z-index: -1;
+transition: 0.8s;
+top: 0;
+border-radius: 0 0 50% 50%;
+}
+#determineButton:hover::before{
+height: 180%;
+}
+
+.modal-container {
+  display:block; 
+  opacity: 0;
+  width: 300px;
+  padding: 10px;
+  background-color: #FFD6A5;
+  border: none;
+  transition: opacity 0.3s ease;
+  position:fixed;
+  border-radius: 2% 2% 2% 2% ;
+  
+}
+.modal-container.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+.back-video{
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  width: auto;
+  height: 100%;
+
+}
+.video-container::before{
+  content: "";  
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6); /* Ubah nilai alpha (0.5) sesuai kebutuhan */
+}
+.video-container video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.video-info{
+  z-index: 99;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+.result {
+    color: #FFFFFF;
+
+}
